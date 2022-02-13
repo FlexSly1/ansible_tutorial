@@ -1,2 +1,8 @@
-ubuntuserver1
-ubuntuserver2
+[web_servers]
+ubuntuserver1 apache_package=apache2 php_package=libapache2-mod-php
+
+[db_servers]
+ubuntuserver2 apache_package=apache2 php_package=libapache2-mod-php
+
+[file_servers]
+ubuntuserver3 apache_package=apache2 php_package=libapache2-mod-php 

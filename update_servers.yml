@@ -5,12 +5,12 @@
   tasks:
 
   - name: update repository index
-    apt:
+    package:
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
 
   - name: upgrade repository
-    apt:
+    package:
       state: latest
       upgrade: yes
     when: ansible_distribution == "Ubuntu"
