@@ -14,4 +14,14 @@
       state: latest
       upgrade: yes
     when: ansible_distribution == "Ubuntu"
-    
+
+  - name: update repository index
+    package:
+      update_cache: yes
+    when: ansible_distribution == "CentOS"
+
+  - name: upgrade repository
+    package:
+      state: latest
+      update_only: yes
+    when: ansible_distribution == "CentOS"
